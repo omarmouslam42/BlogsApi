@@ -5,7 +5,7 @@ import { fileUpload, fileValidation } from "../../utils/multer.js";
 import { auth, roles } from "../../middleware/auth.js";
 import { createPost, getPosts, getPostsById } from "./controller/post.js";
 const router = Router()
-// console.log(Object.values(roles));
+
 
 router.route("/").
 post(auth(Object.values(roles)),fileUpload(fileValidation.image).single("file"),createPost)
