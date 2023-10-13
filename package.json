@@ -8,11 +8,11 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "keywords": [],
+  "author": "",
   "engines": {
     "node": "18.16.0"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
