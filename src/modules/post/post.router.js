@@ -7,9 +7,10 @@ import { createPost, getPosts, getPostsById } from "./controller/post.js";
 const router = Router()
 
 
-router.route("/").
-post(auth(Object.values(roles)),fileUpload(fileValidation.image).single("file"),createPost)
+router.route("/")
 .get(getPosts)
+.post(auth(Object.values(roles)),fileUpload(fileValidation.image).single("file"),createPost)
+
  
 router.get("/:id",getPostsById)
 
