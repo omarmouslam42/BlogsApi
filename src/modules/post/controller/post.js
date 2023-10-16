@@ -1,7 +1,5 @@
 import cloudinary from "../../../utils/cloudinary.js";
 import { asyncHandler } from "../../../utils/errorHandling.js";
-// import { ErrorClass } from "../../../utils/errorClass.js";
-// import { ApiFeatures } from "../../../utils/apiFeatures.js";
 import postModel from "../../../../DB/model/Post.model.js";
 
 export const createPost =asyncHandler(   async (req, res, next) => {
