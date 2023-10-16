@@ -11,6 +11,4 @@ export const asyncHandler = (fn) => {
 
 export const globalErrorHandling =asyncHandler( (error, req, res, next) => {
     return next(new ErrorClass({ msgError: error.message, stack: error.stack }))
-
-    return res.status(error.cause || 400).json({test:"test", msgError: error.message, stack: error.stack })
 })
