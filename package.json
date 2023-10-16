@@ -8,7 +8,6 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  
   "keywords": [],
   "author": "",
   "engines": {
@@ -35,5 +34,8 @@
     "slugify": "^1.6.6",
     "strip": "^3.0.0",
     "stripe": "^13.4.0"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.7"
   }
 }
