@@ -4,11 +4,10 @@ import { asyncHandler } from "../../../utils/errorHandling.js";
 // import { ApiFeatures } from "../../../utils/apiFeatures.js";
 import postModel from "../../../../DB/model/Post.model.js";
 
-export const createPost =asyncHandler(  async (req, res, next) => {
+export const createPost = asyncHandler(  async (req, res, next) => {
     let { title,summary,content } = req.body
     const { secure_url, public_id } = await cloudinary.uploader.upload(req.file?.path, { folder: 'posts' })
     const post = await postModel.create({ title, summary,content, file:{ secure_url, public_id },createdBy:req.user._id })
-    // console.log(post);
     return res.status(200).json({ message: "Done",post })
 } )
 

@@ -14,12 +14,10 @@ export const auth = (role=[])=>{
     return async (req, res, next) => {
         try {
             const { authorization } = req.headers;
-            // console.log(authorization);
             if (!authorization?.startsWith(process.env.BEARER_KEY)) {
                 return res.json({ message: "In-valid bearer key" })
             }
             const token = authorization.split(process.env.BEARER_KEY)[1]
-            // console.log(token);
             if (!token) {
                 return res.json({ message: "In-valid token" })
             } 

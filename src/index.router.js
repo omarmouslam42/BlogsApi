@@ -3,7 +3,6 @@ import authRouter from './modules/auth/auth.router.js'
 import postRouter from './modules/post/post.router.js'
 import { globalErrorHandling } from './utils/errorHandling.js'
 
-// ND7AepotzKWSxCx3
 
 const initApp = (app, express) => {
     app.use(express.json())
@@ -19,7 +18,5 @@ const initApp = (app, express) => {
     connectDB()
 
 }
-
-
 
 export default initApp
