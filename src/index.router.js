@@ -6,16 +6,14 @@ import { globalErrorHandling } from './utils/errorHandling.js'
 
 const initApp = (app, express) => {
     app.use(express.json())
+    app.get("/", (req, res, next) => {
+        return res.status(200).json({message:"Welcome to Blog App"})
+    })
+    app.use(`/auth`, authRouter)
+    app.use(`/post`, postRouter)
 
-    app.use('/', (req, res, next) => {
-        return res.send("Welcome in Blog App")
-     })
-
-   app.use(`/auth`, authRouter)
-   app.use(`/post`, postRouter)
-   
     app.all('*', (req, res, next) => {
-        res.send("In-valid Routing Plz check url  or  method ")
+        res.status(200).send("In-valid Routing , check url  or  method ")
     })
     app.use(globalErrorHandling)
 

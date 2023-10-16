@@ -1,5 +1,3 @@
-
-
 import userModel from '../../../../DB/model/User.model.js';
 import { ErrorClass } from '../../../utils/errorClass.js';
 import { asyncHandler } from './../../../utils/errorHandling.js';

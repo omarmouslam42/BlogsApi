@@ -12,10 +12,8 @@ import cors from "cors"
 const port = process.env.PORT || 5000
 const app = express()
 app.use(cors())
-app.use('/', (req, res, next) => {
-       return res.send("Welcome in Blog App")
-    })
-    
+
+app.set("case sensitive routing", true)
 initApp(app ,express)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
