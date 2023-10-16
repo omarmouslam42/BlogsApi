@@ -7,7 +7,9 @@ import { globalErrorHandling } from './utils/errorHandling.js'
 const initApp = (app, express) => {
     app.use(express.json())
 
-    
+    app.use('/', (req, res, next) => {
+        return res.send("Welcome in Blog App")
+     })
 
    app.use(`/auth`, authRouter)
    app.use(`/post`, postRouter)

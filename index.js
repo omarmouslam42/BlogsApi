@@ -13,8 +13,8 @@ const port = process.env.PORT || 5000
 const app = express()
 app.use(cors())
 app.use('/', (req, res, next) => {
-    return res.send("Welcome in Blog App")
- })
+       return res.send("Welcome in Blog App")
+    })
     
 initApp(app ,express)
 
